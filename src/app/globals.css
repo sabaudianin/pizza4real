@@ -8,7 +8,7 @@
   --accent: #f2cc8f;
   --background: #f4f1de;
   --navColor: rgba(244, 241, 222, 0.5);
-  max-width: "1360px";
+  --medium: #666;
 }
 
 @theme inline {
