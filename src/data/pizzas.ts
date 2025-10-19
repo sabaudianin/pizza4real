@@ -78,4 +78,22 @@ export const pizzas = [
     price: 14.99,
     image: "/pizzas/6.jpg",
   },
+  {
+    title: "Ai Olio",
+    ingredients: "Cream sauce, mozzarella, parsley, oliv oil",
+    price: 11.99,
+    image: "/pastas/m1.jpg",
+  },
+  {
+    title: "Carbonara",
+    ingredients: "Cream sauce, mozzarella, ham, span, egg",
+    price: 12.99,
+    image: "/pastas/m2.png",
+  },
+  {
+    title: "Spaghetti Bolognese",
+    ingredients: "Cream sauce, mozzarella, minced meat, tomatoes,basil",
+    price: 10.99,
+    image: "/pastas/m30.jpg",
+  },
 ];

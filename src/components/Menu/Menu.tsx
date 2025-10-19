@@ -9,7 +9,7 @@ export const Menu = () => {
   return (
     <section
       id="menu"
-      className="p-2"
+      className="p-2 max-w-7xl mx-auto"
     >
       <h2 className="font-bold text-2xl text-center lg:text-4xl">Our Menu</h2>
       <div className="flex justify-center items-center gap-6 mb-4">

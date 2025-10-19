@@ -29,13 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${roboto.variable} lg:text-2xl `}>
+      <body className={`${poppins.variable} ${roboto.variable} lg:text-2xl`}>
         <header className="fixed top-0 w-full z-50 backdrop-blur-[10px] p-6 lg:py-12 bg-[var(--navColor)]">
           <Nav />
         </header>
-        <main className="max-w-screen-2xl mx-auto pt-24 lg:pt-48">
-          {children}
-        </main>
+
+        <main className=" mx-auto pt-22 lg:pt-36 ">{children}</main>
       </body>
     </html>
   );
