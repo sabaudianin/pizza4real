@@ -6,7 +6,7 @@ import { faGhost } from "@fortawesome/free-solid-svg-icons";
 
 export const Banner = () => {
   return (
-    <section className="h-[400px] max-w-7xl text-center bg-orange-200 mx-auto rounded-xl m-2 p-4  shadow-xl shadow-[var(--error)] flex flex-col justify-around items-center">
+    <section className="h-[400px] max-w-7xl text-center bg-orange-200 mx-auto rounded-xl p-4  shadow-xl shadow-[var(--error)] flex flex-col justify-around items-center">
       <span className="font-bold font-display text-[var(----medium)] text-xl">
         {" "}
         Halloween Price Drop!!!{" "}
