@@ -4,7 +4,10 @@ import React from "react";
 import Image from "next/image";
 export const Hero = () => {
   return (
-    <section className="relative px-2 py-8 lg:py-16 bg-[url(/bg.jpg)] bg-cover bg-center bg-no-repeat text-white/90 ">
+    <section
+      id="about"
+      className="relative px-2 py-8 lg:py-16 bg-[url(/bg.jpg)] bg-cover bg-center bg-no-repeat text-white/90 "
+    >
       <div className="absolute inset-0 bg-black/40" />
       <article className="relative grid grid-cols-1 lg:grid-cols-2 items-center font-display py-32 max-w-7xl mx-auto">
         <h1 className="text-[clamp(2.5rem,5vw,4rem)] mb-2 font-bold ">

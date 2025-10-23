@@ -3,7 +3,10 @@ import Link from "next/link";
 
 export const Nav = () => {
   return (
-    <section className="mx-auto flex justify-between items-center max-w-screen-2xl ">
+    <section
+      id="nav"
+      className="mx-auto flex justify-between items-center max-w-screen-2xl "
+    >
       <p className="text-3xl lg:text-4xl font-bold text-[var(--success)]">
         Pizza
         <span className="text-white [-webkit-text-stroke:1px_rgba(0,0,0,0.75)] [text-stroke:1px_rgba(0,0,0,0.75)] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">

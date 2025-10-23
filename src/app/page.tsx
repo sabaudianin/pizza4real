@@ -8,6 +8,7 @@ import { Banner } from "@/components/Banner/Banner";
 import { Features } from "@/components/Features/Features";
 import { PizzaCounter } from "@/components/PizzaCounter/PizzaCounter";
 import { Testimonials } from "@/components/Testimonials/Testimonials";
+import { Footer } from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Features />
       <PizzaCounter />
       <Testimonials />
+      <Footer />
     </>
   );
 }

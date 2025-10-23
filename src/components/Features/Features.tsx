@@ -7,7 +7,7 @@ export const Features = () => {
   return (
     <div className="bg-[var(--success)]/50 shadow-md shadow">
       <section
-        id="#features"
+        id="features"
         className="p-8 text-white/70 font-semibold max-w-7xl mx-auto"
       >
         <article className="grid [grid-template-columns:repeat(auto-fit,minmax(250px,1fr))] gap-6 text-center ">

@@ -11,7 +11,7 @@ export const TestimonialCard: React.FC<TestimonialProp> = ({
 }) => {
   return (
     <article className="p-2">
-      <div className="bg-[var(--accent)]  transition duration-200 hover:scale-105 shadow-xl shadow rounded-xl p-2">
+      <div className="bg-[var(--accent)]/50  transition duration-200 hover:scale-105 shadow-xl shadow rounded-xl p-4 ">
         <FontAwesomeIcon
           icon={faComment}
           className="text-2xl p-2 text-[var(--medium)]"
