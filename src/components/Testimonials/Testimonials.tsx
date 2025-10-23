@@ -1,27 +1,20 @@
 import React from "react";
-import { Card } from "@/ui/elements/card/Card";
-import { faComment } from "@fortawesome/free-solid-svg-icons";
+import { TestimonialCard } from "./TestimonialCard/TestimonalCard";
 
 export const Testimonials = () => {
   return (
-    <section className="text-black bg-red-500 text-center">
-      <Card
-        color="--error"
+    <section className="grid [grid-template-columns:repeat(auto-fit,minmax(250px,1fr))] gap-2 text-center p-4">
+      <TestimonialCard
         text={"The best pizza i ever ate..."}
-        icon={faComment}
-        iconColor="--success"
+        author="John Doe"
       />
-      <Card
-        color="--error"
+      <TestimonialCard
         text={"Will order again!"}
-        icon={faComment}
-        iconColor="red-500"
+        author="Mary Jane"
       />
-      <Card
-        color="--error"
+      <TestimonialCard
         text={"Fast delivery and perfect taste."}
-        icon={faComment}
-        iconColor="red-500"
+        author="Clark Kent"
       />
     </section>
   );
