@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Banner } from "@/components/Banner/Banner";
 import { Features } from "@/components/Features/Features";
 import { PizzaCounter } from "@/components/PizzaCounter/PizzaCounter";
+import { Testimonials } from "@/components/Testimonials/Testimonials";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Menu />
       <Features />
       <PizzaCounter />
+      <Testimonials />
     </>
   );
 }
