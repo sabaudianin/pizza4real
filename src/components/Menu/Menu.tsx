@@ -1,11 +1,20 @@
-import { Button } from "@/ui/elements/button/Button";
-import { pizzas } from "@/data/pizzas";
-import type { PizzaType } from "@/data/pizzas";
-
-import React from "react";
+import React, { useState, useMemo } from "react";
 import Image from "next/image";
 
+import { Button } from "@/ui/elements/button/Button";
+import { pizzas } from "@/data/pizzas";
+import type { Category } from "@/data/pizzas";
+
+type FoodType = "all" | Category;
+
 export const Menu = () => {
+  const [foodFilter, setFoodFilter] = useState<FoodType>("all");
+
+  const filteredFood = useMemo(() => {
+    if (foodFilter === "all") return pizzas;
+    return pizzas.filter((item) => item.category === foodFilter);
+  }, [foodFilter]);
+
   return (
     <section
       id="menu"
@@ -16,23 +25,23 @@ export const Menu = () => {
         <Button
           color="success"
           text="All"
-          onClick={() => console.log("Menu All")}
+          onClick={() => setFoodFilter("all")}
         />
         <Button
           color="success"
           text="Pizza"
-          onClick={() => console.log("Menu Pizza")}
+          onClick={() => setFoodFilter("pizza")}
         />
         <Button
           color="success"
           text="Pasta"
-          onClick={() => console.log("Menu Pasta")}
+          onClick={() => setFoodFilter("pasta")}
         />
       </div>
       <article>
         <div>
           <ul className="grid [grid-template-columns:repeat(auto-fit,minmax(220px,1fr))] md:[grid-template-columns:repeat(auto-fit,minmax(300px,1fr))] gap-6">
-            {pizzas.map((pizza) => (
+            {filteredFood.map((pizza) => (
               <li
                 key={pizza.title}
                 className="overflow-hidden shadow-xl rounded-xl transition duration-200 hover:scale-105 p-2 flex flex-col items-center justify-center hover:shadow-2xl"
