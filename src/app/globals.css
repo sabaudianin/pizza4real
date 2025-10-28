@@ -10,6 +10,9 @@
   --navColor: rgba(244, 241, 222, 0.5);
   --medium: #666;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 @theme inline {
   --color-background: var(--background);

@@ -1,5 +1,10 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+
+import { OrderNow } from "@/ui/elements/orderNow/OrderNow";
+import { HamburgerMenu } from "./HamburgerMenu/HamburgerMenu";
 
 export const Nav = () => {
   return (
@@ -28,7 +33,7 @@ export const Nav = () => {
           Features
         </Link>
         <Link
-          href="#contact"
+          href="#footer"
           className="hover:text-[var(--error)] transition-colors duration-300 font-medium"
         >
           Contact
@@ -40,9 +45,8 @@ export const Nav = () => {
           About
         </Link>
       </nav>
-      <button className="bg-[var(--error)] px-4 py-2 cursor-pointer rounded-2xl transition-transform duration-300  hover:translate-y-[-2px] hover:shadow-lg font-bold lg:text-xl text-white">
-        Order Now
-      </button>
+      <OrderNow />
+      <HamburgerMenu />
     </section>
   );
 };

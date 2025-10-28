@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <div className="bg-[var(--medium)] ">
       <section
-        id="contact"
+        id="footer"
         className="max-w-7xl mx-auto p-4 text-white/90 text-center "
       >
         <div className="grid [grid-template-columns:repeat(auto-fit,minmax(250px,1fr))] gap-4 p-4 pb-8">
@@ -34,7 +34,7 @@ export const Footer = () => {
               <li>
                 <FontAwesomeIcon
                   icon={faInstagram}
-                  className="text-2xl p-2 text-purple-400 hover:text-pink-300 transition-colors duration-300"
+                  className="text-2xl p-2 text-pink-400 hover:text-orange-400 transition-colors duration-300"
                 />
               </li>
             </ul>
