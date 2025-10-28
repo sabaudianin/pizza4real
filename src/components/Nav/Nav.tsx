@@ -3,7 +3,6 @@
 import React from "react";
 import Link from "next/link";
 
-import { OrderNow } from "@/ui/elements/orderNow/OrderNow";
 import { HamburgerMenu } from "./HamburgerMenu/HamburgerMenu";
 
 export const Nav = () => {
@@ -45,7 +44,7 @@ export const Nav = () => {
           About
         </Link>
       </nav>
-      <OrderNow />
+
       <HamburgerMenu />
     </section>
   );

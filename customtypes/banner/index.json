@@ -1,0 +1,58 @@
+{
+  "format": "custom",
+  "id": "banner",
+  "label": "banner",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "banner_title": {
+        "type": "Text",
+        "config": {
+          "label": "banner title",
+          "placeholder": ""
+        }
+      },
+      "banner_content": {
+        "type": "StructuredText",
+        "config": {
+          "label": "banner content",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "is_active": {
+        "type": "Boolean",
+        "config": {
+          "label": "is active",
+          "placeholder_false": "false",
+          "placeholder_true": "true",
+          "default_value": false
+        }
+      },
+      "old_price": {
+        "type": "Number",
+        "config": {
+          "label": "old_price",
+          "placeholder": ""
+        }
+      },
+      "new_price": {
+        "type": "Number",
+        "config": {
+          "label": "new price",
+          "placeholder": ""
+        }
+      },
+      "promo_image": {
+        "type": "Image",
+        "config": {
+          "label": "promo image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

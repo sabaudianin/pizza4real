@@ -27,8 +27,10 @@ export const HamburgerMenu = () => {
         />
       </button>
       <div
-        className={`absolute inset-x-0 top-full bottom-0  h-screen bg-black/40 transition-opacity ${
-          isOpen ? "opacity-100" : "opacity-0"
+        className={`absolute inset-x-0 top-full bottom-0 h-screen bg-black/40 transition-opacity ${
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0  pointer-events-none"
         }`}
         onClick={closeMenu}
         aria-hidden="true"
@@ -37,38 +39,50 @@ export const HamburgerMenu = () => {
         <nav
           id="mobile-menu"
           aria-label="Mobile"
-          className={`absolute w-full right-0  flex  flex-col items-center justify-between p-4 shadow-xl gap-4 transition-transform duration-300 text-xl bg-white/70  ${
-            isOpen ? "translate-x-0" : "translate-x-full"
+          className={`absolute top-full left-0 right-0 transition-transform transition-opacity duration-300 text-xl shadow-xl bg-white/70  ${
+            isOpen
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-2 pointer-events-none"
           }`}
         >
-          <Link
-            href="#menu"
-            className="hover:text-[var(--error)] transition-colors duration-300 font-medium"
-            onClick={closeMenu}
-          >
-            Menu
-          </Link>
-          <Link
-            href="#features"
-            className="hover:text-[var(--error)] transition-colors duration-300 font-medium"
-            onClick={closeMenu}
-          >
-            Features
-          </Link>
-          <Link
-            href="#footer"
-            className="hover:text-[var(--error)] transition-colors duration-300 font-medium"
-            onClick={closeMenu}
-          >
-            Contact
-          </Link>
-          <Link
-            href="#about"
-            className="hover:text-[var(--error)] transition-colors duration-300 font-medium"
-            onClick={closeMenu}
-          >
-            About
-          </Link>
+          <ul className="flex flex-col items-center gap-2 p-4 text-xl font-bold">
+            <li>
+              <Link
+                href="#menu"
+                onClick={closeMenu}
+                className="block px-3 py-2 hover:text-[var(--error)] transition-colors"
+              >
+                Menu
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#features"
+                onClick={closeMenu}
+                className="block px-3 py-2 hover:text-[var(--error)] transition-colors"
+              >
+                Features
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#footer"
+                onClick={closeMenu}
+                className="block px-3 py-2 hover:text-[var(--error)] transition-colors"
+              >
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#about"
+                onClick={closeMenu}
+                className="block px-3 py-2 hover:text-[var(--error)] transition-colors"
+              >
+                About
+              </Link>
+            </li>
+          </ul>
         </nav>
       )}
     </section>
