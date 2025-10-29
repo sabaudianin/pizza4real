@@ -139,6 +139,17 @@ interface BannerDocumentData {
    * - **Documentation**: https://prismic.io/docs/fields/image
    */
   promo_image: prismic.ImageField<never>;
+
+  /**
+   * color field in *banner*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: banner.color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/color
+   */
+  color: prismic.ColorField;
 }
 
 /**

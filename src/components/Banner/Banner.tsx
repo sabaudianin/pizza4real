@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGhost } from "@fortawesome/free-solid-svg-icons";
+import { faPercent } from "@fortawesome/free-solid-svg-icons";
 
 import { client } from "@/lib/prismicio";
 import { PrismicRichText } from "@prismicio/react";
@@ -20,24 +20,27 @@ export const Banner = async () => {
   const oldPrice = data.old_price as number;
   const newPrice = data.new_price as number;
   const promoImage = data.promo_image?.url || "/pizza.png";
+  const color = data.color;
 
   return (
-    <section className="h-[400px] max-w-7xl text-center bg-orange-200 mx-auto rounded-xl p-4 shadow-xl shadow-[var(--error)] flex flex-col justify-around items-center">
+    <section
+      className={`h-[400px] max-w-7xl text-center bg-[${color}] mx-auto rounded-xl p-4 m-2 shadow-xl shadow-[var(--error)] flex flex-col justify-around items-center`}
+    >
       <span className="font-bold font-display text-[var(----medium)] text-xl">
         {title}
       </span>
 
       <div>
         <FontAwesomeIcon
-          icon={faGhost}
+          icon={faPercent}
           className="text-4xl text-[var(--success)]"
         />
         <FontAwesomeIcon
-          icon={faGhost}
+          icon={faPercent}
           className="text-4xl text-white"
         />
         <FontAwesomeIcon
-          icon={faGhost}
+          icon={faPercent}
           className="text-4xl text-[var(--error)]"
         />
       </div>
@@ -51,9 +54,7 @@ export const Banner = async () => {
           className=""
         />
 
-        {/* DYNAMICZNY OPIS PROMOCJI (Rich Text) */}
         <span className="text-sm font-semibold">
-          {/* Renderowanie  Rich Text z Prismic */}
           <PrismicRichText field={data.banner_content} />
         </span>
       </div>
