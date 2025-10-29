@@ -1,13 +1,3 @@
-export type Category = "pizza" | "pasta";
-
-type PizzaType = {
-  title: string;
-  ingredients: string;
-  price: number;
-  image: string;
-  category: Category;
-};
-
 export const pizzas = [
   {
     title: "Margherita",

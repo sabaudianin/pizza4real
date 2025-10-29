@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { Button } from "@/ui/elements/button/Button";
 import { pizzas } from "@/data/pizzas";
-import type { Category } from "@/data/pizzas";
+import type { Category } from "@/types/types";
 
 type FoodType = "all" | Category;
 
