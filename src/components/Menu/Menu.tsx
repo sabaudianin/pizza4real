@@ -1,19 +1,19 @@
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
-
+import { MenuType } from "@/types/types";
 import { Button } from "@/ui/elements/button/Button";
 import { pizzas } from "@/data/pizzas";
 import type { Category } from "@/types/types";
 
 type FoodType = "all" | Category;
 
-export const Menu = () => {
+export const Menu = ({ menuData }: { menuData: MenuType[] }) => {
   const [foodFilter, setFoodFilter] = useState<FoodType>("all");
 
   const filteredFood = useMemo(() => {
-    if (foodFilter === "all") return pizzas;
-    return pizzas.filter((item) => item.category === foodFilter);
-  }, [foodFilter]);
+    if (foodFilter === "all") return menuData;
+    return menuData.filter((item) => item.category === foodFilter);
+  }, [foodFilter, menuData]);
 
   return (
     <section
@@ -41,23 +41,23 @@ export const Menu = () => {
       <article>
         <div>
           <ul className="grid [grid-template-columns:repeat(auto-fit,minmax(220px,1fr))] md:[grid-template-columns:repeat(auto-fit,minmax(300px,1fr))] gap-6">
-            {filteredFood.map((pizza) => (
+            {filteredFood.map((item) => (
               <li
-                key={pizza.title}
+                key={item.title}
                 className="overflow-hidden shadow-xl rounded-xl transition duration-200 hover:scale-105 p-2 flex flex-col items-center justify-center hover:shadow-2xl"
               >
                 <Image
-                  src={pizza.image}
-                  alt={pizza.title}
+                  src={item.image}
+                  alt={item.title}
                   width={300}
                   height={200}
                   className="rounded-xl"
                 />
                 <h2 className=" text-2xl text-center font-semibold text-shadow">
-                  {pizza.title}
+                  {item.title}
                 </h2>
-                <p className="text-lg">{pizza.ingredients}</p>
-                <p className="font-bold text-[var(--error)]">{pizza.price} $</p>
+                <p className="text-lg">{item.ingredients}</p>
+                <p className="font-bold text-[var(--error)]">{item.price} $</p>
               </li>
             ))}
           </ul>
