@@ -20,11 +20,12 @@ export const Banner = async () => {
   const oldPrice = data.old_price as number;
   const newPrice = data.new_price as number;
   const promoImage = data.promo_image?.url || "/pizza.png";
-  const color = data.color;
+  const color = data.color as string;
 
   return (
     <section
-      className={`h-[400px] max-w-7xl text-center bg-[${color}] mx-auto rounded-xl p-4 m-2 shadow-xl shadow-[var(--error)] flex flex-col justify-around items-center`}
+      className={`h-[400px] max-w-7xl text-center  mx-auto rounded-xl p-4 m-2 shadow-xl shadow-[var(--error)] flex flex-col justify-around items-center`}
+      style={{ backgroundColor: color }}
     >
       <span className="font-bold font-display text-[var(----medium)] text-xl">
         {title}

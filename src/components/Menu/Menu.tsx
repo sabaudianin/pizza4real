@@ -1,8 +1,9 @@
+"use client";
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import { MenuType } from "@/types/types";
 import { Button } from "@/ui/elements/button/Button";
-import { pizzas } from "@/data/pizzas";
+
 import type { Category } from "@/types/types";
 
 type FoodType = "all" | Category;
