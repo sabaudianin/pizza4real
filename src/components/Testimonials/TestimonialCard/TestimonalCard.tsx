@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment } from "@fortawesome/free-regular-svg-icons";
 
 type TestimonialProp = {
-  text: String;
+  text: string;
   author: string;
 };
 export const TestimonialCard: React.FC<TestimonialProp> = ({

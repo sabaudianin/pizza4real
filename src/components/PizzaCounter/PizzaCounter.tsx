@@ -5,16 +5,17 @@ const INITIAL_PIZZA_COUNT = 10945;
 
 const START_DATE = new Date(2025, 9, 23);
 
-const getRandomDailyIncrease = (
-  min: number = 10,
-  max: number = 30,
-  daySeed: number
-): number => {
-  const random = Math.sin(daySeed + 1000 * daySeed * (daySeed % 10)) * 10000;
-  const seededValue = Math.abs(random - Math.floor(random));
+const getRandomDailyIncrease = useCallback(
+  () =>
+    (min: number = 10, max: number = 30, daySeed: number): number => {
+      const random =
+        Math.sin(daySeed + 1000 * daySeed * (daySeed % 10)) * 10000;
+      const seededValue = Math.abs(random - Math.floor(random));
 
-  return Math.floor(seededValue * (max - min + 1)) + min;
-};
+      return Math.floor(seededValue * (max - min + 1)) + min;
+    },
+  []
+);
 
 export const PizzaCounter: React.FC = () => {
   const counterRef = useRef<HTMLElement>(null);
