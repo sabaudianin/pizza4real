@@ -9,15 +9,15 @@ export const Testimonials = () => {
       </h2>
       <div className="grid [grid-template-columns:repeat(auto-fit,minmax(250px,1fr))] gap-2 text-center">
         <TestimonialCard
-          text={"The best pizza i ever ate..."}
+          text={"The best pizza i ever ate."}
           author="John Doe"
         />
         <TestimonialCard
-          text={"Will order again!"}
-          author="Mary Jane"
+          text={"Will order again, and again and again..!"}
+          author="Mary Kowalsky"
         />
         <TestimonialCard
-          text={"Fast delivery and perfect taste."}
+          text={"Fast delivery and perfect taste, 10/10."}
           author="Clark Kent"
         />
       </div>

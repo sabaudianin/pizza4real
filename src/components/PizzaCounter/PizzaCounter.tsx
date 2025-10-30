@@ -123,7 +123,7 @@ export const PizzaCounter: React.FC = () => {
           {animatedCounter.toLocaleString("pl-PL")}
         </p>
         <p className="text-lg lg:text-xl">
-          pizz, and this number still grownig.
+          pizzas, and this number still grownig.
         </p>
       </div>
     </section>

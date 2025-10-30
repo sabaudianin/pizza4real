@@ -5,6 +5,7 @@ import { MenuType } from "@/types/types";
 export const MenuLoader = async () => {
   const menuResponse = await client.getAllByType("menu_item", {
     orderings: [
+      //prefix my
       { field: "my.menu_item.category", direction: "asc" },
       { field: "my.menu_item.title", direction: "asc" },
     ],

@@ -55,21 +55,13 @@ export const Banner = async () => {
           className=""
         />
 
-        <span className="text-sm font-semibold">
+        <span className=" font-bold">
           <PrismicRichText field={data.banner_content} />
         </span>
       </div>
 
       <p className="flex items-baseline gap-2 font-bold text-lg md:text-xl">
-        <span
-          className="
-                    relative 
-                    text-gray-400 
-                    line-through 
-                    text-base 
-                    font-normal
-                "
-        >
+        <span className="relative text-[var(--medium)] text-base line-through">
           {oldPrice.toFixed(2)} $
         </span>
 

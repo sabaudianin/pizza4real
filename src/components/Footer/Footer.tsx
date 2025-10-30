@@ -68,10 +68,11 @@ export const Footer = () => {
         <hr />
 
         <div>
-          <p className="text-xs pt-4">
+          <p className="text-base pt-4">
             &copy;{new Date().getFullYear()} Pizza4Real. All Rights Reserved{" "}
           </p>
           <p className="text-sm">Develop & Design rafbobbob@gmail.com</p>
+          <p className="text-sm">Images by Pixabay</p>
         </div>
       </section>
     </div>

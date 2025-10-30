@@ -24,7 +24,7 @@ export const Features = () => {
               icon={faSeedling}
               className="text-4xl text-green-700 p-2"
             />
-            <h3 className=" text-white text-xl lg:text-3xl ">
+            <h3 className="text-white text-xl lg:text-3xl ">
               Organic ingriedients
             </h3>
             <p className="">Sourced from local farmers</p>
